@@ -4,7 +4,7 @@
 #include <unistd.h>
 #include <string.h>
 #define PORT 8080
-   
+
 int main(int argc, char const *argv[])
 {
     int socketR = 0, returnValue;
@@ -20,7 +20,7 @@ int main(int argc, char const *argv[])
     
     serv_addr.sin_family = AF_INET;
     serv_addr.sin_port = htons(PORT);
-       
+
     // The inet_pton() function converts an Internet address in its standard text 
     // format into its numeric binary form. The argument af specifies the family of the address.
     if(inet_pton(AF_INET, "127.0.0.1", &serv_addr.sin_addr)<=0) 

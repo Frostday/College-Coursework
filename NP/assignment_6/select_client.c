@@ -8,9 +8,7 @@
 int main(int argc, char const *argv[])
 {
     int socketR = 0, returnValue;
-
     struct sockaddr_in serv_addr;
-    
     char buffer[1024] = {0};
     
     socketR = socket(AF_INET, SOCK_STREAM, 0);
@@ -19,7 +17,6 @@ int main(int argc, char const *argv[])
         printf("\n Socket creation error \n");
         return -1;
     }
-    
 
     serv_addr.sin_family = AF_INET;
     serv_addr.sin_port = htons(PORT);
@@ -30,7 +27,6 @@ int main(int argc, char const *argv[])
         return -1;
     }
    
-
     if (connect(socketR, (struct sockaddr *)&serv_addr, sizeof(serv_addr)) < 0)
     {
         printf("\nConnection Failed \n");

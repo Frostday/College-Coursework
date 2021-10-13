@@ -83,7 +83,6 @@ int main(int argc, char *argv[])
         //add child sockets to set
         for (i = 0; i < max_clients; i++)
         {
-
             //socket descriptor
             sd = client_socket[i];
 
@@ -139,7 +138,7 @@ int main(int argc, char *argv[])
             sd = client_socket[i];
             if (FD_ISSET(sd, &readfds))
             {
-                //Check if it was for closing , and also read the //incoming message
+                //Check if it was for closing , and also read the incoming message
                 if ((valread = read(sd, buffer, 1024)) == 0)
                 {
                     //Somebody disconnected , get his details and print
