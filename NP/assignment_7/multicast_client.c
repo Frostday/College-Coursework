@@ -11,7 +11,7 @@
 struct in_addr localInterface;
 struct sockaddr_in groupSock;
 int sd;
-char databuf[1024] = "HOR baaai ki haal ae";
+char databuf[1024] = "Hi!";
 int datalen = sizeof(databuf);
 int main(int argc, char *argv[])
 {
